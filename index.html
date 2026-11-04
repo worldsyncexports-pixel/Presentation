@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worldsync Exports | Exporting from Algeria to Worldwide Markets</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0a192f',
+                            950: '#030712',
+                        },
+                        emerald: {
+                            500: '#10b981',
+                            600: '#059669',
+                            800: '#065f46',
+                            900: '#022c22',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .arabic-text {
+            font-family: 'Amiri', serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.94) 0%, rgba(2, 44, 34, 0.90) 100%), 
+                        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+        }
+        .emerald-gradient {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Top Info & Quick Contact Bar -->
+    <div class="bg-navy-950 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                <a href="tel:+213550535344" class="flex items-center gap-2 hover:text-amber-400 transition-colors">
+                    <i class="fa-solid fa-phone text-emerald-400"></i> +213 550 53 53 44
+                </a>
+                <a href="mailto:worldsyncexports@gmail.com" class="hidden sm:flex items-center gap-2 hover:text-amber-400 transition-colors">
+                    <i class="fa-solid fa-envelope text-emerald-400"></i> worldsyncexports@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/chafik-mohamed-djabri-aab5653b9/" target="_blank" rel="noopener" class="hidden lg:flex items-center gap-2 hover:text-amber-400 transition-colors">
+                    <i class="fa-brands fa-linkedin text-emerald-400"></i> Chafik Mohamed Djabri
+                </a>
+            </div>
+            
+            <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <a href="https://wa.me/213550535344" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-1 rounded-md text-xs font-semibold transition-all">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <!-- Language Switcher -->
+                <div class="flex items-center space-x-1 rtl:space-x-reverse bg-slate-800 p-1 rounded-lg border border-slate-700">
+                    <button onclick="setLanguage('en')" id="btn-lang-en" class="px-2 py-0.5 rounded text-xs font-semibold transition-all bg-amber-500 text-navy-900 shadow">EN</button>
+                    <button onclick="setLanguage('fr')" id="btn-lang-fr" class="px-2 py-0.5 rounded text-xs font-semibold transition-all hover:text-amber-400">FR</button>
+                    <button onclick="setLanguage('ar')" id="btn-lang-ar" class="px-2 py-0.5 rounded text-xs font-semibold transition-all hover:text-amber-400 arabic-text">العربية</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="bg-navy-900/90 backdrop-blur-md sticky top-0 z-40 border-b border-slate-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo & Graphic -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-navy-950 flex items-center justify-center text-amber-400 font-bold text-xl shadow-lg border border-emerald-500/30 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold tracking-tight text-white block leading-none">WORLDSYNC</span>
+                        <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Exports Algeria</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8 rtl:space-x-reverse font-medium text-sm text-slate-300">
+                    <a href="#about" class="hover:text-amber-400 transition-colors" data-i18n="nav_about">About Leadership</a>
+                    <a href="#products" class="hover:text-amber-400 transition-colors" data-i18n="nav_products">Export Catalog</a>
+                    <a href="#logistics" class="hover:text-amber-400 transition-colors" data-i18n="nav_logistics">Logistics & Standards</a>
+                    <a href="#calculator" class="hover:text-amber-400 transition-colors" data-i18n="nav_calculator">Freight Calculator</a>
+                    <a href="#rfq" class="emerald-gradient hover:opacity-90 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg transition-all hover:scale-105" data-i18n="nav_rfq">Request Quote</a>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-950 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-300 font-medium hover:text-amber-400" onclick="toggleMobileMenu()" data-i18n="nav_about">About Leadership</a>
+            <a href="#products" class="block py-2 text-slate-300 font-medium hover:text-amber-400" onclick="toggleMobileMenu()" data-i18n="nav_products">Export Catalog</a>
+            <a href="#logistics" class="block py-2 text-slate-300 font-medium hover:text-amber-400" onclick="toggleMobileMenu()" data-i18n="nav_logistics">Logistics & Standards</a>
+            <a href="#calculator" class="block py-2 text-slate-300 font-medium hover:text-amber-400" onclick="toggleMobileMenu()" data-i18n="nav_calculator">Freight Calculator</a>
+            <a href="#rfq" class="block text-center emerald-gradient text-white py-3 rounded-xl font-semibold" onclick="toggleMobileMenu()" data-i18n="nav_rfq">Request Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-24 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-emerald-500/40 text-xs font-semibold text-emerald-400 backdrop-blur-sm">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+                    <span>WORLDSYNC EXPORTS • ALGERIA TO THE WORLD</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight" data-i18n="hero_title">
+                    Exporting from Algeria to Worldwide Markets
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-light" data-i18n="hero_subtitle">
+                    Connecting global buyers with premium Algerian agricultural commodities, extra virgin olive oil, fine artisanal crafts, and high-grade industrial resources with reliable global shipping.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="px-8 py-4 rounded-xl gold-gradient text-navy-950 font-bold text-base shadow-xl hover:scale-105 transition-all text-center flex items-center justify-center gap-2">
+                        <span data-i18n="hero_btn_explore">Explore Products Catalog</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#calculator" class="px-8 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-white font-semibold text-base backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calculator text-amber-400"></i>
+                        <span data-i18n="hero_btn_calc">Request Freight Quote</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-slate-800">
+                <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-amber-400">Global</div>
+                    <div class="text-xs sm:text-sm text-slate-300 font-medium" data-i18n="stat_reach">Worldwide Shipping Coverage</div>
+                </div>
+                <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-300 font-medium" data-i18n="stat_quality">Certified Algerian Products</div>
+                </div>
+                <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-amber-400">FOB / CIF</div>
+                    <div class="text-xs sm:text-sm text-slate-300 font-medium" data-i18n="stat_incoterms">Flexible Commercial Terms</div>
+                </div>
+                <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">Direct</div>
+                    <div class="text-xs sm:text-sm text-slate-300 font-medium" data-i18n="stat_sourcing">Producer & Grove Sourcing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & Founder Highlight Section -->
+    <section id="about" class="py-20 bg-navy-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Business Card & Founder Profile Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-navy-950 p-8 rounded-3xl border border-amber-500/30 shadow-2xl space-y-6 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
+                        
+                        <!-- Header / Logo Graphic -->
+                        <div class="flex justify-between items-start border-b border-slate-800 pb-6">
+                            <div>
+                                <h3 class="text-2xl font-black tracking-tight text-white">DJABRI CHAFIK</h3>
+                                <p class="text-amber-400 font-semibold text-sm">Founder & Manager</p>
+                                <p class="text-xs text-slate-400 mt-1">Worldsync Exports Algeria</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-emerald-400 text-xl font-bold shadow">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                        </div>
+
+                        <!-- Direct Contacts List -->
+                        <div class="space-y-4 text-sm">
+                            <a href="tel:+213550535344" class="flex items-center gap-3 text-slate-300 hover:text-amber-400 transition-colors p-2.5 rounded-xl hover:bg-slate-800/60">
+                                <div class="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <span class="font-medium">+213 550 53 53 44</span>
+                            </a>
+
+                            <a href="https://wa.me/213550535344" target="_blank" rel="noopener" class="flex items-center gap-3 text-slate-300 hover:text-amber-400 transition-colors p-2.5 rounded-xl hover:bg-slate-800/60">
+                                <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="font-medium block leading-none">Direct WhatsApp Chat</span>
+                                    <span class="text-[11px] text-slate-400">+213 550 53 53 44</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/chafik-mohamed-djabri-aab5653b9/" target="_blank" rel="noopener" class="flex items-center gap-3 text-slate-300 hover:text-amber-400 transition-colors p-2.5 rounded-xl hover:bg-slate-800/60">
+                                <div class="w-9 h-9 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-brands fa-linkedin text-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="font-medium block leading-none">LinkedIn Profile</span>
+                                    <span class="text-[11px] text-slate-400">Chafik Mohamed Djabri</span>
+                                </div>
+                            </a>
+
+                            <a href="mailto:worldsyncexports@gmail.com" class="flex items-center gap-3 text-slate-300 hover:text-amber-400 transition-colors p-2.5 rounded-xl hover:bg-slate-800/60">
+                                <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <span class="font-medium">worldsyncexports@gmail.com</span>
+                            </a>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-800">
+                            <span class="text-xs italic text-slate-400 block text-center">"Exporting from Algeria to Worldwide Markets"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Company Info -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs font-bold tracking-widest text-amber-400 uppercase" data-i18n="about_tag">Leadership & Vision</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight" data-i18n="about_title">
+                        Your Trusted Algerian Supply & Global Trade Partner
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed" data-i18n="about_desc">
+                        Under the management of **Djabri Chafik**, Worldsync Exports serves as a premier trade bridge connecting international buyers with verified Algerian agricultural producers, premium food manufacturers, and industrial suppliers.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-navy-950 p-5 rounded-2xl border border-slate-800 space-y-2">
+                            <i class="fa-solid fa-shield-halved text-emerald-400 text-xl"></i>
+                            <h4 class="font-bold text-white text-sm" data-i18n="about_card1_title">Quality Assurance</h4>
+                            <p class="text-xs text-slate-400" data-i18n="about_card1_desc">Rigorous phytosanitary and export compliance inspection on all outgoing cargo.</p>
+                        </div>
+                        <div class="bg-navy-950 p-5 rounded-2xl border border-slate-800 space-y-2">
+                            <i class="fa-solid fa-route text-amber-400 text-xl"></i>
+                            <h4 class="font-bold text-white text-sm" data-i18n="about_card2_title">Streamlined Logistics</h4>
+                            <p class="text-xs text-slate-400" data-i18n="about_card2_desc">Seamless freight handling via main maritime ports and air cargo hubs.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalog / Showcase -->
+    <section id="products" class="py-20 bg-navy-950 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-xs font-bold tracking-wider text-amber-400 uppercase" data-i18n="catalog_tag">Verified Supply Offerings</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white" data-i18n="catalog_title">Featured Export Offerings</h2>
+                <p class="text-slate-400 text-sm sm:text-base" data-i18n="catalog_subtitle">Select a category to explore Algerian export-certified commodities ready for container shipment.</p>
+            </div>
+
+            <!-- Filter Categories Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10" id="product-filters">
+                <button onclick="filterProducts('all')" class="filter-btn active bg-emerald-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-md">All Offerings</button>
+                <button onclick="filterProducts('dates')" class="filter-btn bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all">Deglet Noor Dates</button>
+                <button onclick="filterProducts('beverages')" class="filter-btn bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all">Hamoud Boualem Drinks</button>
+                <button onclick="filterProducts('sweets')" class="filter-btn bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all">Sweets & Candies</button>
+                <button onclick="filterProducts('custom')" class="filter-btn bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all"><i class="fa-solid fa-network-wired"></i> Custom Sourcing</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+                <!-- Javascript populated -->
+            </div>
+
+            <!-- Broad Custom Sourcing Channel Banner -->
+            <div class="mt-16 bg-gradient-to-r from-navy-900 via-emerald-950 to-navy-900 p-8 sm:p-12 rounded-3xl border border-amber-500/40 shadow-2xl relative overflow-hidden">
+                <div class="max-w-3xl space-y-4 relative z-10">
+                    <span class="bg-amber-400/20 text-amber-300 border border-amber-400/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Huge Algerian Supplier Network</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Looking for Other Specific Algerian Goods?</h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Through our extensive local contact channel and producer network across Algeria, **Worldsync Exports** can directly source, package, and export any agricultural product, specialty food, or raw material according to your specifications.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-4">
+                        <button onclick="openCustomSourcingModal()" class="gold-gradient hover:opacity-95 text-navy-950 font-bold px-6 py-3 rounded-xl shadow-lg transition-all flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Custom Sourcing Inquiry
+                        </button>
+                        <a href="https://wa.me/213550535344?text=Hello%20Djabri%20Chafik,%20I%20have%20a%20custom%20export%20sourcing%20inquiry" target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all flex items-center gap-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Direct Sourcing WhatsApp Chat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freight & Lead Time Calculator Section (PRICE FREE) -->
+    <section id="calculator" class="py-20 bg-navy-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-xs font-bold tracking-wider text-amber-400 uppercase" data-i18n="calc_tag">B2B Trade Estimator</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white" data-i18n="calc_title">International Freight & Lead Time Estimator</h2>
+                <p class="text-slate-400 text-sm sm:text-base" data-i18n="calc_subtitle">Calculate estimated transit time, packaging arrangements, and Incoterms for shipments from Algerian ports.</p>
+            </div>
+
+            <div class="bg-navy-950 rounded-3xl shadow-2xl p-6 sm:p-10 border border-slate-800 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Inputs -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="calc_lbl_product">Product Category</label>
+                        <select id="calc-product" onchange="calculateFreight()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            <option value="dates">Deglet Noor Dates (Royal Grade)</option>
+                            <option value="drinks">Hamoud Boualem Fizzy Drinks & Beverages</option>
+                            <option value="sweets">Algerian Sweets, Halwa & Candies</option>
+                            <option value="custom">Custom Algerian Commodity / Sourcing</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="calc_lbl_weight">Shipment Volume (Metric Tons)</label>
+                            <input type="number" id="calc-weight" value="15" min="1" max="500" oninput="calculateFreight()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="calc_lbl_incoterm">Target Incoterm</label>
+                            <select id="calc-incoterm" onchange="calculateFreight()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                <option value="FOB">FOB - Free On Board (Algiers / Oran)</option>
+                                <option value="CIF">CIF - Cost, Insurance & Freight</option>
+                                <option value="CFR">CFR - Cost & Freight</option>
+                                <option value="EXW">EXW - Ex Works (Warehouse)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="calc_lbl_destination">Destination Region</label>
+                            <select id="calc-destination" onchange="calculateFreight()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                <option value="europe">Europe (EU / UK)</option>
+                                <option value="north_america">North America (USA / Canada)</option>
+                                <option value="asia">Asia / Middle East</option>
+                                <option value="africa">Africa (Regional)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2" data-i18n="calc_lbl_shipping">Freight Mode</label>
+                            <select id="calc-shipping" onchange="calculateFreight()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                <option value="sea_fcl">Sea Cargo (FCL Container)</option>
+                                <option value="sea_lcl">Sea Cargo (LCL Shared)</option>
+                                <option value="air">Air Freight Cargo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Display Results (NO PRICES) -->
+                <div class="lg:col-span-5 bg-slate-900 rounded-2xl p-6 sm:p-8 text-white flex flex-col justify-between border border-emerald-500/30">
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                            <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Logistics & Lead Time Summary</span>
+                            <i class="fa-solid fa-ship text-emerald-400 text-lg"></i>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-400">Container Packaging:</span>
+                                <span id="res-container" class="font-bold text-white">20ft Reefer / Dry</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-400">Estimated Transit:</span>
+                                <span id="res-transit" class="font-bold text-emerald-400">4 - 7 Days</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-400">Phytosanitary & Customs:</span>
+                                <span class="font-bold text-amber-400">Export Certified</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-400">Wholesale Pricing:</span>
+                                <span class="font-bold text-amber-400">Custom Quote Upon Request</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-800">
+                            <div class="text-xs text-slate-400 leading-relaxed font-light">
+                                Submit this specification to receiving an official B2B quotation directly from Manager Djabri Chafik.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button onclick="applyCalcToRFQ()" class="w-full gold-gradient hover:opacity-95 text-navy-950 font-bold py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                            <span>Use Specs in Quote Request</span>
+                            <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Request for Quotation (RFQ) -->
+    <section id="rfq" class="py-20 bg-navy-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-xs font-bold tracking-wider text-amber-400 uppercase" data-i18n="rfq_tag">Commercial Portal</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white" data-i18n="rfq_title">Request an Official Quotation</h2>
+                <p class="text-slate-400 text-sm sm:text-base" data-i18n="rfq_subtitle">Submit your commercial specifications directly to **Worldsync Exports**. Our management team will reply with full details.</p>
+            </div>
+
+            <form id="rfq-form" onsubmit="handleRFQSubmit(event)" class="bg-navy-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">Company Name *</label>
+                        <input type="text" required placeholder="e.g. Global Agri Foods LLC" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">Contact Name / Role *</label>
+                        <input type="text" required placeholder="e.g. Procurement Manager" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">Business Email *</label>
+                        <input type="email" required placeholder="buyer@company.com" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">Destination Port / Country *</label>
+                        <input type="text" id="rfq-destination" required placeholder="e.g. Marseille, France / Dubai, UAE" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">Commodity Selection</label>
+                        <input type="text" id="rfq-product" placeholder="e.g. Deglet Noor Dates" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">Estimated Volume</label>
+                        <input type="text" id="rfq-volume" placeholder="e.g. 15 Metric Tons (FOB)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-300 mb-2">Detailed Specifications & Packaging Notes</label>
+                    <textarea rows="4" placeholder="Specify packaging preferences, target delivery schedule, certification requirements..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full emerald-gradient hover:opacity-90 text-white font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Send RFQ to Worldsync Exports</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-navy-900 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-700 max-h-[90vh] overflow-y-auto text-white">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="modal-content">
+                <!-- Javascript populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast Modal -->
+    <div id="toast-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-navy-900 rounded-3xl max-w-md w-full p-8 shadow-2xl text-center space-y-4 border border-emerald-500/40 text-white">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto text-2xl font-bold">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold">Inquiry Sent Successfully!</h3>
+            <p class="text-slate-300 text-sm">Thank you for contacting **Worldsync Exports**. Founder & Manager Djabri Chafik and our trade team will review your RFQ promptly.</p>
+            <button onclick="closeToast()" class="w-full emerald-gradient text-white font-bold py-3 rounded-xl shadow">Close Window</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-300 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-navy-900 flex items-center justify-center text-amber-400 font-bold text-lg border border-emerald-500/30">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <span class="text-lg font-extrabold text-white">WORLDSYNC</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Exporting premium Algerian commodities, fine olive oils, agricultural produce, and minerals to global markets.
+                    </p>
+                    <div class="pt-2">
+                        <a href="https://wa.me/213550535344" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg text-xs font-semibold shadow">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Connect on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Executive Contact Details -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Executive Contact</h4>
+                    <ul class="space-y-3 text-xs text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-user text-amber-400"></i>
+                            <span><strong>Founder & Manager:</strong> Djabri Chafik</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-emerald-400"></i>
+                            <a href="tel:+213550535344" class="hover:text-amber-400">+213 550 53 53 44</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-amber-400"></i>
+                            <a href="mailto:worldsyncexports@gmail.com" class="hover:text-amber-400">worldsyncexports@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-linkedin text-blue-400"></i>
+                            <a href="https://www.linkedin.com/in/chafik-mohamed-djabri-aab5653b9/" target="_blank" rel="noopener" class="hover:text-amber-400">Chafik Mohamed Djabri</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Product Lines -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Export Lines</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#products" class="hover:text-amber-400">Deglet Noor Dates</a></li>
+                        <li><a href="#products" class="hover:text-amber-400">Cold Pressed Olive Oil</a></li>
+                        <li><a href="#products" class="hover:text-amber-400">Artisanal & Pottery</a></li>
+                        <li><a href="#products" class="hover:text-amber-400">Industrial Minerals</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tagline & Mission -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Worldsync Mission</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed italic border-l-2 border-amber-400 pl-3">
+                        "Exporting from Algeria to Worldwide Markets"
+                    </p>
+                    <p class="text-[11px] text-slate-500 mt-4">
+                        Comprehensive export packaging, logistics, customs handling, and international delivery.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; 2026 Worldsync Exports Algeria. All Rights Reserved. Managed by Djabri Chafik.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Sourcing Modal -->
+    <div id="custom-sourcing-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-navy-900 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-amber-500/40 text-white">
+            <button onclick="closeCustomSourcingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xl">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Custom Sourcing Request</h3>
+                        <p class="text-xs text-slate-400">Tap into our extensive supplier channel across Algeria</p>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Looking for a product not in our standard catalog? Describe your required Algerian product, specifications, and estimated volume below. Manager Djabri Chafik will personally coordinate with local suppliers.
+                </p>
+                <form onsubmit="handleCustomSourcingSubmit(event)" class="space-y-3">
+                    <input type="text" required placeholder="Your Company Name" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    <input type="email" required placeholder="Your Business Email" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    <textarea rows="3" required placeholder="Describe the desired Algerian product (e.g. olive oil, spices, artisan items, agricultural produce...)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white focus:ring-2 focus:ring-amber-500 focus:outline-none"></textarea>
+                    <button type="submit" class="w-full gold-gradient text-navy-950 font-bold py-3 rounded-xl shadow transition-all text-xs uppercase tracking-wider">
+                        Send Direct Sourcing Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Data & Logic -->
+    <script>
+        // Products Dataset customized for Worldsync Exports
+        const productsData = [
+            {
+                id: 'dates-deglet',
+                category: 'dates',
+                title: 'Deglet Noor Dates (Royal Amber Grade)',
+                origin: 'Biskra & Saharan Groves',
+                image: 'https://images.unsplash.com/photo-1546548970-71785318a17b?auto=format&fit=crop&w=600&q=80',
+                desc: 'World-renowned Algerian Deglet Noor dates. Translucent amber color, natural sweetness, available branched or pitted in bulk export packaging.',
+                specs: {
+                    packaging: '5kg Bulk Cartons / 1kg Box Packaging / Date Paste Units',
+                    moisture: '18% - 22%',
+                    minOrder: '1x 20ft Container (14 Metric Tons)',
+                    certifications: 'Phytosanitary, ISO 22000, Halal'
+                }
+            },
+            {
+                id: 'hamoud-drinks',
+                category: 'beverages',
+                title: 'Hamoud Boualem Fizzy Drinks & Sodas',
+                origin: 'Algiers Bottling Facilities',
+                image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80',
+                desc: 'Iconic Algerian fizzy drinks including Hamoud White Gazouz, Selecto (Kola Apple), Slim range, and citrus beverages for international markets.',
+                specs: {
+                    packaging: '250ml Cans / 1L & 2L PET Bottles in Palletized Shrink Wraps',
+                    flavors: 'Gazouz White, Selecto, Slim Lemon, Orange, Apple',
+                    minOrder: '1x 20ft Container Mix',
+                    certifications: 'Export Quality Standard, Halal'
+                }
+            },
+            {
+                id: 'sweets-candies',
+                category: 'sweets',
+                title: 'Algerian Sweets, Halwa Chamia & Confectionery',
+                origin: 'Traditional Algerian Confectioners',
+                image: 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?auto=format&fit=crop&w=600&q=80',
+                desc: 'Authentic Algerian sweets, sesame Halwa Chamia, Tcharek / Gazelle Horns, artisanal bonbons, and traditional honey pastry selections.',
+                specs: {
+                    packaging: 'Export Sealed Tins / Food-Grade Box Cartons',
+                    shelfLife: '12 Months Guaranteed Export Packaging',
+                    minOrder: '1 Pallet LCL / FCL Container Mix',
+                    certifications: 'Halal Certified, Food Safety ISO'
+                }
+            },
+            {
+                id: 'custom-sourcing-card',
+                category: 'custom',
+                title: 'Custom Product Sourcing Channel',
+                origin: 'Vast Supplier Network Across Algeria',
+                image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80',
+                desc: 'Need custom agricultural, food, or industrial products from Algeria? We utilize our extensive contact channel to procure and export to your specs.',
+                specs: {
+                    packaging: 'Customized as per Buyer Specifications',
+                    sourcingScope: 'Agricultural, Artisanal, Industrial, Foodstuffs',
+                    minOrder: 'Flexible B2B Minimums',
+                    certifications: 'Phytosanitary & Customs Handling Included'
+                }
+            }
+        ];
+
+        // Language Translation Dictionary
+        const translations = {
+            en: {
+                nav_about: "About Leadership",
+                nav_products: "Export Catalog",
+                nav_logistics: "Logistics & Standards",
+                nav_calculator: "Freight Calculator",
+                nav_rfq: "Request Quote",
+                hero_title: "Exporting from Algeria to Worldwide Markets",
+                hero_subtitle: "Connecting global buyers with premium Algerian Deglet Noor dates, iconic Hamoud Boualem drinks, traditional sweets, and custom Algerian goods.",
+                hero_btn_explore: "Explore Export Catalog",
+                hero_btn_calc: "Request Freight Quote",
+                stat_reach: "Worldwide Shipping Coverage",
+                stat_quality: "Certified Algerian Products",
+                stat_incoterms: "Flexible Commercial Terms",
+                stat_sourcing: "Direct Supplier Channel",
+                about_tag: "Leadership & Vision",
+                about_title: "Your Trusted Algerian Supply & Global Trade Partner",
+                about_desc: "Under the management of Djabri Chafik, Worldsync Exports serves as a premier trade bridge connecting international buyers with verified Algerian agricultural producers, beverage manufacturers, and custom suppliers.",
+                about_card1_title: "Quality Assurance",
+                about_card1_desc: "Rigorous phytosanitary and export compliance inspection on all outgoing cargo.",
+                about_card2_title: "Streamlined Logistics",
+                about_card2_desc: "Seamless freight handling via main maritime ports and air cargo hubs.",
+                catalog_tag: "Verified Supply Offerings",
+                catalog_title: "Featured Export Offerings",
+                catalog_subtitle: "Select a category to explore Algerian export-certified commodities ready for shipment.",
+                calc_tag: "B2B Trade Estimator",
+                calc_title: "International Freight & Lead Time Estimator",
+                calc_subtitle: "Calculate estimated transit time, packaging arrangements, and Incoterms for shipments from Algerian ports.",
+                calc_lbl_product: "Product Category",
+                calc_lbl_weight: "Shipment Volume (Metric Tons)",
+                calc_lbl_incoterm: "Target Incoterm",
+                calc_lbl_destination: "Destination Region",
+                calc_lbl_shipping: "Freight Mode",
+                rfq_tag: "Commercial Portal",
+                rfq_title: "Request an Official Quotation",
+                rfq_subtitle: "Submit your commercial specifications directly to Worldsync Exports. Our management team will reply with full details."
+            },
+            fr: {
+                nav_about: "Direction",
+                nav_products: "Catalogue Export",
+                nav_logistics: "Logistique & Normes",
+                nav_calculator: "Calculateur de Fret",
+                nav_rfq: "Demander un Devis",
+                hero_title: "Exportation de l'Algérie vers les Marchés Mondiaux",
+                hero_subtitle: "Mise en relation des acheteurs internationaux avec les dattes Deglet Noor, les boissons Hamoud Boualem, les confiseries et produits algériens sur mesure.",
+                hero_btn_explore: "Explorer le Catalogue",
+                hero_btn_calc: "Demander un Devis de Fret",
+                stat_reach: "Couverture Logistique Mondiale",
+                stat_quality: "Produits Certifiés Algérie",
+                stat_incoterms: "Conditions Commerciales Souples",
+                stat_sourcing: "Réseau de Sourcing Direct",
+                about_tag: "Direction & Vision",
+                about_title: "Votre Partenaire Commercial d'Exportation Algérien",
+                about_desc: "Sous la direction de Djabri Chafik, Worldsync Exports relie directement les acheteurs internationaux aux producteurs et fabricants algériens.",
+                about_card1_title: "Assurance Qualité",
+                about_card1_desc: "Contrôle phytosanitaire rigoureux et conformité douanière.",
+                about_card2_title: "Logistique Fluide",
+                about_card2_desc: "Expéditions efficaces depuis les principaux ports algériens.",
+                catalog_tag: "Offres Certifiées",
+                catalog_title: "Offres d'Exportation Phares",
+                catalog_subtitle: "Sélectionnez une catégorie pour découvrir nos marchandises.",
+                calc_tag: "Estimateur B2B",
+                calc_title: "Calculateur de Fret International",
+                calc_subtitle: "Estimez les délais et modes d'expédition au départ d'Algérie.",
+                calc_lbl_product: "Catégorie de Produit",
+                calc_lbl_weight: "Volume (Tonnes Métriques)",
+                calc_lbl_incoterm: "Incoterm Souhaité",
+                calc_lbl_destination: "Région Destinataire",
+                calc_lbl_shipping: "Mode de Transport",
+                rfq_tag: "Portail Commercial",
+                rfq_title: "Demander une Cotation Officielle",
+                rfq_subtitle: "Envoyez vos spécifications directement à Worldsync Exports."
+            },
+            ar: {
+                nav_about: "عن القيادة",
+                nav_products: "كتالوج التصدير",
+                nav_logistics: "اللوجستيات والمعايير",
+                nav_calculator: "حاسبة الشحن",
+                nav_rfq: "طلب عرض سعر",
+                hero_title: "التصدير من الجزائر إلى الأسواق العالمية",
+                hero_subtitle: "نربط المشتري الدولي بأجود تمور دقلة نور الجزائرية، مشروبات حمود بوعلام الشهيرة، الحلويات التقليدية، والمنتجات الجزائرية المخصصة حسب الطلب.",
+                hero_btn_explore: "تصفح الكتالوج",
+                hero_btn_calc: "حساب مواصفات الشحن",
+                stat_reach: "تغطية شحن عالمية",
+                stat_quality: "منتجات جزائرية معتمدة",
+                stat_incoterms: "شروط تجارية مرنة",
+                stat_sourcing: "شبكة التوريد المباشر",
+                about_tag: "الرؤية والقيادة",
+                about_title: "شريككم الموثوق للتصدير من الجزائر",
+                about_desc: "تحت إدارة جابري شفيق، تعمل شركة Worldsync Exports كجسر تجاري يربط المستوردين الدوليين بمنتجي التمور، والمشروبات، والحلويات الجزائرية.",
+                about_card1_title: "ضمان الجودة",
+                about_card1_desc: "فحص دقيق للصحة النباتية ومطابقة التصدير.",
+                about_card2_title: "لوجستيات سلسة",
+                about_card2_desc: "شحن سريع عبر الموانئ والمطارات الجزائرية.",
+                catalog_tag: "عروض موثوقة",
+                catalog_title: "منتجات التصدير المتميزة",
+                catalog_subtitle: "اختر الفئة لتصفح المنتجات المعتمدة للتصدير.",
+                calc_tag: "حاسبة التصدير",
+                calc_title: "حاسبة الشحن ومواعيد التسليم الدولية",
+                calc_subtitle: "احسب المدة التقديرية ومواصفات الشحن من الموانئ الجزائرية.",
+                calc_lbl_product: "فئة المنتج",
+                calc_lbl_weight: "حجم الشحنة (بالأطنان)",
+                calc_lbl_incoterm: "شرط التجارة",
+                calc_lbl_destination: "وجهة الشحن",
+                calc_lbl_shipping: "وسيلة النقل",
+                rfq_tag: "البوابة التجارية",
+                rfq_title: "طلب عرض سعر رسمي",
+                rfq_subtitle: "أرسل مواصفات شحنتك مباشرة إلى Worldsync Exports."
+            }
+        };
+
+        // Render Product Cards
+        function renderProducts(category = 'all') {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'all' 
+                ? productsData 
+                : productsData.filter(p => p.category === category);
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-navy-900 rounded-3xl border border-slate-800 overflow-hidden shadow-xl hover:border-amber-500/40 transition-all flex flex-col justify-between group";
+                card.innerHTML = `
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-navy-950/80 backdrop-blur-md text-amber-400 text-xs px-3 py-1 rounded-full border border-slate-700 font-semibold">
+                                ${p.origin}
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">${p.title}</h3>
+                            <p class="text-slate-300 text-xs leading-relaxed line-clamp-2">${p.desc}</p>
+                            <div class="pt-2 border-t border-slate-800 space-y-1 text-xs text-slate-400">
+                                <div><strong class="text-slate-200">Packaging:</strong> ${p.specs.packaging || p.specs.sourcingScope}</div>
+                                <div><strong class="text-slate-200">MOQ:</strong> ${p.specs.minOrder}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex gap-2">
+                        <button onclick="openModal('${p.id}')" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-2.5 rounded-xl text-xs transition-colors border border-slate-700">
+                            View Details
+                        </button>
+                        <button onclick="selectProductForRFQ('${p.title}')" class="w-full emerald-gradient hover:opacity-90 text-white font-semibold py-2.5 rounded-xl text-xs transition-opacity shadow">
+                            Request Quote
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter buttons behavior
+        function filterProducts(cat) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-emerald-600', 'text-white');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            event.target.classList.add('active', 'bg-emerald-600', 'text-white');
+            event.target.classList.remove('bg-slate-800', 'text-slate-300');
+            renderProducts(cat);
+        }
+
+        // Product Modal Logic
+        function openModal(productId) {
+            const product = productsData.find(p => p.id === productId);
+            if (!product) return;
+
+            const modalContent = document.getElementById('modal-content');
+            let specsHTML = '';
+            for (const [key, value] of Object.entries(product.specs)) {
+                specsHTML += `
+                    <div class="flex justify-between py-2 border-b border-slate-800 text-xs">
+                        <span class="text-slate-400 capitalize font-medium">${key}:</span>
+                        <span class="text-white font-semibold text-right">${value}</span>
+                    </div>
+                `;
+            }
+
+            modalContent.innerHTML = `
+                <div class="space-y-6">
+                    <img src="${product.image}" alt="${product.title}" class="w-full h-56 object-cover rounded-2xl border border-slate-700">
+                    <div>
+                        <span class="text-xs text-amber-400 font-bold uppercase tracking-wider">${product.origin}</span>
+                        <h3 class="text-2xl font-bold text-white mt-1">${product.title}</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed mt-2">${product.desc}</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs uppercase font-bold text-amber-400 mb-2 tracking-wider">Export Specifications</h4>
+                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                            ${specsHTML}
+                        </div>
+                    </div>
+                    <button onclick="selectProductForRFQ('${product.title}'); closeModal();" class="w-full emerald-gradient text-white font-bold py-3.5 rounded-xl shadow-lg hover:opacity-95 transition-all text-sm">
+                        Request Quote for ${product.title}
+                    </button>
+                </div>
+            `;
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        // Custom Sourcing Modal Logic
+        function openCustomSourcingModal() {
+            document.getElementById('custom-sourcing-modal').classList.remove('hidden');
+        }
+
+        function closeCustomSourcingModal() {
+            document.getElementById('custom-sourcing-modal').classList.add('hidden');
+        }
+
+        function handleCustomSourcingSubmit(e) {
+            e.preventDefault();
+            closeCustomSourcingModal();
+            document.getElementById('toast-modal').classList.remove('hidden');
+        }
+
+        // Calculator Logic
+        function calculateFreight() {
+            const product = document.getElementById('calc-product').value;
+            const weight = parseFloat(document.getElementById('calc-weight').value) || 1;
+            const destination = document.getElementById('calc-destination').value;
+            const mode = document.getElementById('calc-shipping').value;
+
+            let transit = "4 - 7 Days";
+            if (destination === 'north_america') { transit = "14 - 20 Days"; }
+            if (destination === 'asia') { transit = "18 - 25 Days"; }
+            if (destination === 'africa') { transit = "8 - 12 Days"; }
+
+            let container = "20ft Dry / Reefer Container";
+            if (mode === 'sea_lcl') { container = "Palletized LCL Cargo"; }
+            if (mode === 'air') { container = "Air Cargo Pallet"; transit = "2 - 4 Days"; }
+
+            document.getElementById('res-container').innerText = container;
+            document.getElementById('res-transit').innerText = transit;
+        }
+
+        function applyCalcToRFQ() {
+            const prodText = document.getElementById('calc-product').options[document.getElementById('calc-product').selectedIndex].text;
+            const weight = document.getElementById('calc-weight').value;
+            const incoterm = document.getElementById('calc-incoterm').value;
+            const dest = document.getElementById('calc-destination').options[document.getElementById('calc-destination').selectedIndex].text;
+
+            document.getElementById('rfq-product').value = prodText;
+            document.getElementById('rfq-volume').value = `${weight} Metric Tons (${incoterm})`;
+            document.getElementById('rfq-destination').value = dest;
+
+            document.getElementById('rfq').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function selectProductForRFQ(title) {
+            document.getElementById('rfq-product').value = title;
+            document.getElementById('rfq').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleRFQSubmit(e) {
+            e.preventDefault();
+            document.getElementById('toast-modal').classList.remove('hidden');
+        }
+
+        function closeToast() {
+            document.getElementById('toast-modal').classList.add('hidden');
+            document.getElementById('rfq-form').reset();
+        }
+
+        // Language Switcher
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            // Active button highlight
+            ['en', 'fr', 'ar'].forEach(l => {
+                const btn = document.getElementById(`btn-lang-${l}`);
+                if (l === lang) {
+                    btn.className = "px-2 py-0.5 rounded text-xs font-semibold transition-all bg-amber-500 text-navy-900 shadow";
+                } else {
+                    btn.className = "px-2 py-0.5 rounded text-xs font-semibold transition-all hover:text-amber-400";
+                }
+            });
+
+            // Update translateable strings
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // Initialize script logic
+        window.onload = function() {
+            renderProducts('all');
+            calculateFreight();
+        }
+    </script>
+</body>
+</html>
