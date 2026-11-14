@@ -569,18 +569,19 @@
 
     <!-- JavaScript Data & Logic -->
     <script>
-        // 10 Partner Brands for Processed Food & Beverage Line (Click leads to official brand website)
+        // 11 Partner Brands for Processed Food & Beverage Line (Click leads to official brand website)
         const processedFoodBrands = [
-            { name: "Frico", basePath: "images/frico", url: "https://www.frico.com" },
-            { name: "Bimo", basePath: "images/bimo", url: "https://www.groupe-bimo.com" },
-            { name: "Ramy", basePath: "images/ramy", url: "https://www.ramyfood.com" },
-            { name: "N'gaous", basePath: "images/ngaous", url: "https://www.ngaous.dz" },
-            { name: "Palmary", basePath: "images/palmary", url: "https://www.palmaryfood.com" },
-            { name: "El Mordjene (Cebon)", basePath: "images/el-mordjene", url: "https://www.cebon.dz" },
-            { name: "Caprice", basePath: "images/caprice", url: "https://www.caprice.dz" },
-            { name: "Hamoud Boualem", basePath: "images/hamoud-boualem", url: "https://www.hamoud-boualem.com" },
+            { name: "Cherchell", basePath: "images/cherchell", url: "https://www.cherchell.dz" },
+            { name: "Soummam", basePath: "images/soummam", url: "https://www.laiteriesoummam.com" },
             { name: "Toudja", basePath: "images/toudja", url: "https://www.toudja.dz" },
-            { name: "Soummam", basePath: "images/soummam", url: "https://www.laiteriesoummam.com" }
+            { name: "Hamoud Boualem", basePath: "images/hamoud-boualem", url: "https://www.hamoud-boualem.com" },
+            { name: "Caprice", basePath: "images/caprice", url: "https://www.caprice.dz" },
+            { name: "El Mordjene (Cebon)", basePath: "images/el-mordjene", url: "https://www.cebon.dz" },
+            { name: "Palmary", basePath: "images/palmary", url: "https://www.palmaryfood.com" },
+            { name: "N'gaous", basePath: "images/ngaous", url: "https://www.ngaous.dz" },
+            { name: "Ramy", basePath: "images/ramy", url: "https://www.ramyfood.com" },
+            { name: "Bimo", basePath: "images/bimo", url: "https://www.groupe-bimo.com" },
+            { name: "Frico", basePath: "images/frico", url: "https://www.frico.com" }
         ];
 
         // Helper function for automatic image extension resolution (.jpg -> .jpeg -> .png -> clean fallback)
@@ -597,15 +598,14 @@
             }
         }
 
-        // Generates the clickable Brand Grid HTML
-        function getBrandGridHTML(compact = false) {
-            const gridCols = compact ? "grid-cols-5 gap-2" : "grid-cols-2 sm:grid-cols-5 gap-3";
+        // Generates the clickable Brand Grid HTML for the View Details modal
+        function getBrandGridHTML() {
             const items = processedFoodBrands.map(brand => `
                 <a href="${brand.url}" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    title="Visit ${brand.name} Official Website"
-                   class="group/brand bg-white rounded-xl p-1.5 flex items-center justify-center border border-slate-700 hover:border-amber-400 hover:scale-105 transition-all shadow-md overflow-hidden aspect-square">
+                   class="group/brand bg-white rounded-2xl p-2.5 flex flex-col items-center justify-center border border-slate-700 hover:border-amber-400 hover:scale-105 transition-all shadow-md overflow-hidden aspect-square">
                     <img src="${brand.basePath}.jpg" 
                          alt="${brand.name} Logo" 
                          loading="lazy"
@@ -615,13 +615,13 @@
             `).join('');
 
             return `
-                <div class="pt-3 border-t border-slate-800">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">
-                            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Partner Brands (Click to Visit Site)
+                <div class="pt-4 border-t border-slate-800">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-400">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-1.5"></i> Featured Partner Brands (Click Logo to Visit Official Website)
                         </span>
                     </div>
-                    <div class="grid ${gridCols}">
+                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
                         ${items}
                     </div>
                 </div>
@@ -631,17 +631,17 @@
         // Generalized Dataset for Worldsync Exports
         const productsData = [
             {
-                id: 'food-beverages',
+                id: 'food-beverage',
                 category: 'food-beverage',
                 title: 'Processed Food & Beverage Line',
-                origin: 'Leading Algerian Food & Beverage Brands',
+                origin: 'Algerian Manufacturing Units',
                 image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80',
                 hasBrands: true,
-                desc: 'Export-ready Algerian beverages, juices, dairy, spreads, biscuits, and confectionery from top national brands including Frico, Bimo, Ramy, N\'gaous, Palmary, El Mordjene (Cebon), Caprice, Hamoud Boualem, Toudja, and Soummam.',
+                desc: 'High-demand Algerian food items, iconic fizzy drinks, juices, dairy, spreads, biscuits, and confectionery from leading brands including Cherchell, Soummam, Toudja, Hamoud Boualem, Caprice, El Mordjene (Cebon), Palmary, N\'gaous, Ramy, Bimo, and Frico.',
                 specs: {
                     packaging: 'Export Palletized Shrink Wraps, Cartons & Tins',
                     sourcingScope: 'Direct Factory & Brand Distribution',
-                    minOrder: 'FCL Container / Mixed Brand Pallets',
+                    minOrder: 'FCL Container / Palletized Mix',
                     certifications: 'Export Quality Standard, ISO 22000, Halal'
                 }
             },
@@ -676,7 +676,7 @@
             {
                 id: 'artisanal-crafts',
                 category: 'crafts',
-                title: 'Artisanal & Manufactured Products',
+                title: 'Artisanal & Traditional Crafts',
                 origin: 'Craftsmen & Manufacturing Guilds',
                 image: 'https://images.unsplash.com/photo-1582293041079-7814c2f12063?auto=format&fit=crop&w=800&q=80',
                 desc: 'Traditional Algerian craftwork, ceramics, leather goods, textiles, and specialty manufactured items curated for global retail and hospitality markets.',
@@ -823,11 +823,7 @@
 
             filtered.forEach(p => {
                 const card = document.createElement('div');
-                // Make Processed Food & Beverage Line span 2 columns on large screens when viewing 'all' so all 10 partner brand logos shine clearly
-                const spanClass = (p.hasBrands && category === 'all') ? "md:col-span-2 lg:col-span-2" : (p.hasBrands ? "md:col-span-2 lg:col-span-3" : "");
-                card.className = `bg-navy-900 rounded-3xl border border-slate-800 overflow-hidden shadow-xl hover:border-amber-500/40 transition-all flex flex-col justify-between group ${spanClass}`;
-                
-                const brandSection = p.hasBrands ? getBrandGridHTML(false) : '';
+                card.className = "bg-navy-900 rounded-3xl border border-slate-800 overflow-hidden shadow-xl hover:border-amber-500/40 transition-all flex flex-col justify-between group";
 
                 card.innerHTML = `
                     <div>
@@ -839,12 +835,11 @@
                         </div>
                         <div class="p-6 space-y-3">
                             <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">${p.title}</h3>
-                            <p class="text-slate-300 text-xs leading-relaxed">${p.desc}</p>
+                            <p class="text-slate-300 text-xs leading-relaxed line-clamp-2">${p.desc}</p>
                             <div class="pt-2 border-t border-slate-800 space-y-1 text-xs text-slate-400">
                                 <div><strong class="text-slate-200">Packaging:</strong> ${p.specs.packaging}</div>
                                 <div><strong class="text-slate-200">MOQ:</strong> ${p.specs.minOrder}</div>
                             </div>
-                            ${brandSection}
                         </div>
                     </div>
                     <div class="p-6 pt-0 flex gap-2">
@@ -891,7 +886,7 @@
                 `;
             }
 
-            const modalBrandHTML = product.hasBrands ? getBrandGridHTML(false) : '';
+            const modalBrandHTML = product.hasBrands ? getBrandGridHTML() : '';
 
             modalContent.innerHTML = `
                 <div class="space-y-6">
