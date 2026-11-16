@@ -229,7 +229,7 @@
                         <select id="calc-product" onchange="calculateFreight()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                             <option value="food">Processed Food & Beverage Line</option>
                             <option value="agri">Agriculture & Produce (Deglet Noor Dates, Olive Oil)</option>
-                            <option value="industrial">Industrial & Raw Materials (Paper Rolls, Minerals)</option>
+                            <option value="industrial">Industrial & Raw Materials (Packaging, Construction, Glass)</option>
                             <option value="custom">Custom Sourcing / Any Client Requirement</option>
                         </select>
                     </div>
@@ -313,7 +313,7 @@
                     <div><label class="block text-xs font-bold uppercase text-slate-300 mb-2">Destination Port / Country *</label><input type="text" id="rfq-destination" required placeholder="e.g. Marseille, France / Dubai, UAE" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"></div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div><label class="block text-xs font-bold uppercase text-slate-300 mb-2">Product / Commodity Required</label><input type="text" id="rfq-product" placeholder="e.g. Any Algerian Product / Processed Food" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"></div>
+                    <div><label class="block text-xs font-bold uppercase text-slate-300 mb-2">Product / Commodity Required</label><input type="text" id="rfq-product" placeholder="e.g. Any Algerian Product / Industrial Goods" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"></div>
                     <div><label class="block text-xs font-bold uppercase text-slate-300 mb-2">Estimated Volume</label><input type="text" id="rfq-volume" placeholder="e.g. 15 Metric Tons (FOB)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"></div>
                 </div>
                 <div><label class="block text-xs font-bold uppercase text-slate-300 mb-2">Detailed Specifications & Packaging Notes</label><textarea rows="4" placeholder="Specify any specific product, packaging preferences, target delivery schedule..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea></div>
@@ -424,6 +424,19 @@
             { name: "Frico", img: "WhatsApp Image 2026-11-14 at 3.15.09 AM.jpeg", url: "https://www.frico.com" }
         ];
 
+        const industrialBrands = [
+            { name: "FADERCO", img: "WhatsApp Image 2026-11-15 at 2.06.14 AM.jpeg", url: "https://www.faderco.dz/" },
+            { name: "HPS (Hasnaoui Profile Systems)", img: "WhatsApp Image 2026-11-15 at 2.07.22 AM.jpeg", url: "https://hps-dz.com/" },
+            { name: "Tonic Industrie", img: "WhatsApp Image 2026-11-15 at 2.08.24 AM.jpeg", url: "https://www.tonic-industrie.com/" },
+            { name: "MFG (Mediterranean Float Glass)", img: "WhatsApp Image 2026-11-15 at 2.09.35 AM.jpeg", url: "https://mfg.dz/en" },
+            { name: "Alucostar Plus", img: "WhatsApp Image 2026-11-15 at 2.10.45 AM.jpeg", url: "https://www.alucostar.dz/" },
+            { name: "OXXO Baies", img: "WhatsApp Image 2026-11-15 at 2.12.11 AM.jpeg", url: "https://oxxo.dz/" },
+            { name: "Knauf Algérie", img: "WhatsApp Image 2026-11-15 at 2.13.25 AM.jpeg", url: "https://knauf.com/en-DZ" },
+            { name: "Lafarge Algérie (Holcim)", img: "WhatsApp Image 2026-11-15 at 2.14.30 AM.jpeg", url: "https://www.holcim.dz/" },
+            { name: "Sika El Djazair", img: "WhatsApp Image 2026-11-15 at 2.15.33 AM.jpeg", url: "https://dza.sika.com/" },
+            { name: "General Emballage", img: "WhatsApp Image 2026-11-15 at 2.16.48 AM.jpeg", url: "https://generalemballage.com/en/" }
+        ];
+
         const productsData = [
             {
                 id: 'food-beverage',
@@ -449,8 +462,8 @@
                 title: 'Industrial & Raw Materials',
                 origin: 'National Industrial Mills & Plants',
                 image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80',
-                desc: 'Recycled cellulose paper rolls, industrial molded pulp packaging, raw cork, minerals, and specialized hardware components.',
-                specs: { packaging: 'Export Palletized Rolls / Industrial Crates', minOrder: 'Full Container Load (FCL)', compliance: 'Export Grade ISO' }
+                desc: 'Corrugated packaging, recycled cellulose paper, float glass, aluminum profiles, ACP panels, gypsum boards, cement, construction chemicals, and hygiene tissue.',
+                specs: { packaging: 'Export Palletized Rolls / Industrial Crates', minOrder: 'Full Container Load (FCL)', brandsCount: '10 Featured Partner Manufacturers' }
             },
             {
                 id: 'artisanal-goods',
@@ -507,6 +520,21 @@
             renderProducts(cat);
         }
 
+        function buildBrandGrid(brandsList) {
+            return `
+                <div class="mt-6 pt-6 border-t border-slate-800">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Featured Partner Companies (Click to Visit Official Website)</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        ${brandsList.map(b => `
+                            <a href="${b.url}" target="_blank" rel="noopener noreferrer" title="Visit ${b.name} Website" class="group bg-white rounded-xl p-2.5 flex flex-col items-center justify-center border border-slate-700 hover:border-amber-400 hover:scale-105 transition-all shadow-md aspect-square">
+                                <img src="${b.img}" alt="${b.name}" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/200x200/0f172a/fbbf24?text=${encodeURIComponent(b.name)}';" class="w-full h-full object-contain">
+                            </a>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
         function openModal(productId) {
             const product = productsData.find(p => p.id === productId);
             if (!product) return;
@@ -515,18 +543,9 @@
             let brandsHTML = '';
 
             if (productId === 'food-beverage') {
-                brandsHTML = `
-                    <div class="mt-6 pt-6 border-t border-slate-800">
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Featured Partner Brands (Click to Visit Official Website)</h4>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                            ${processedFoodBrands.map(b => `
-                                <a href="${b.url}" target="_blank" rel="noopener noreferrer" title="Visit ${b.name} Website" class="group bg-white rounded-xl p-2.5 flex flex-col items-center justify-center border border-slate-700 hover:border-amber-400 hover:scale-105 transition-all shadow-md aspect-square">
-                                    <img src="${b.img}" alt="${b.name}" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/200x200/0f172a/fbbf24?text=${encodeURIComponent(b.name)}';" class="w-full h-full object-contain">
-                                </a>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
+                brandsHTML = buildBrandGrid(processedFoodBrands);
+            } else if (productId === 'industrial-materials') {
+                brandsHTML = buildBrandGrid(industrialBrands);
             }
 
             modalContent.innerHTML = `
